@@ -9,24 +9,15 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class GameScene: SKScene{
     
-    //MARK: - Properties
+
+    // MARK: Properties
     
     var groundNode = Ground()
-    var playerNode = Player()
-    var cloud = Cloud()
     
-    var moveSpeed: CGFloat = 8.0
-    
-    var wallTimer: Timer?
-    var cloudTimer: Timer?
-    
-  
-    
-    
-    
-    //MARK: - Systems
+    private var label : SKLabelNode?
+    private var spinnyNode : SKShapeNode?
     
     override func didMove(to view: SKView) {
      

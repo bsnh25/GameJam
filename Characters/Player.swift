@@ -12,7 +12,7 @@ class Player: SKSpriteNode {
     var isMoveDown = false
     
     init(){
-        let texture = SKTexture(imageNamed: "Tikus1")
+        let texture = SKTexture(imageNamed: "Tikus-1")
         super.init(texture: texture, color: .clear, size: texture.size())
         name = "Player"
         zPosition = 1.0
@@ -44,8 +44,9 @@ extension Player {
         var textures: [SKTexture] = []
         
         for i in 1...2 {
-            textures.append(SKTexture(imageNamed: "Tikus\(i)"))
+            textures.append(SKTexture(imageNamed: "Tikus-\(i)"))
         }
+        run(.repeatForever(.animate(with: textures, timePerFrame: 0.1)))
     }
     
     func setupMoveUpDown() {
