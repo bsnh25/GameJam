@@ -11,7 +11,7 @@ import SpriteKit
 class Ground: SKSpriteNode {
     
     init() {
-        let texture = SKTexture(imageNamed: "ground")
+        let texture = SKTexture(imageNamed: "Background")
         super.init(texture: texture, color: .clear, size: texture.size())
         name = "Ground"
         zPosition = -1.0
