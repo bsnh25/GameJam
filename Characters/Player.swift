@@ -1,9 +1,8 @@
 //
 //  Player.swift
-//  NInja
+//  GameJam
 //
-//  Created by Jack Ily on 13/11/2019.
-//  Copyright © 2019 Jack Ily. All rights reserved.
+//  Created by Bayu Septyan Nur Hidayat on 30/05/2024.
 //
 
 import SpriteKit
@@ -12,8 +11,8 @@ class Player: SKSpriteNode {
     
     var isMoveDown = false
     
-    init(){
-        let texture = SKTexture(imageNamed: "Tikus-1")
+    init() {
+        let texture = SKTexture(imageNamed: "player1")
         super.init(texture: texture, color: .clear, size: texture.size())
         name = "Player"
         zPosition = 1.0
@@ -79,7 +78,7 @@ extension Player {
 //            scale = 1.0  // Adjusted scale value for moving up
 //            moveBy = SKAction.moveBy(x: 0.0, y: frame.height / 2, duration: 0.1)
 //        }
-//        
+//
 //        let flipY = SKAction.scaleY(to: scale, duration: 0.1)
 //        let checkPosition = SKAction.run {
 //            // Ensure player doesn't move out of the visible area

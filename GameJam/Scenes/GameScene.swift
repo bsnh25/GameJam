@@ -1,12 +1,8 @@
 //
 //  GameScene.swift
-//  NInja
-//  NInja
+//  GameJam
 //
-//  Created by Jack Ily on 13/11/2019.
-//  Copyright © 2019 Jack Ily. All rights reserved.
-//  Created by Jack Ily on 13/11/2019.
-//  Copyright © 2019 Jack Ily. All rights reserved.
+//  Created by Bayu Septyan Nur Hidayat on 30/05/2024.
 //
 
 import SpriteKit
@@ -129,7 +125,7 @@ extension GameScene {
         }])))
         wallTimer = Timer.scheduledTimer(timeInterval: TimeInterval(wallRandom), target: self, selector: #selector(spawnWalls), userInfo: nil, repeats: true)
         
-        let cloudRandom = CGFloat.random(min: 5.5, max: 10.5)
+//        let cloudRandom = CGFloat.random(min: 5.5, max: 10.5)
 //        cloudTimer = Timer.scheduledTimer(timeInterval: TimeInterval(cloudRandom), target: self, selector: #selector(spawnClouds), userInfo: nil, repeats: true)
     }
     

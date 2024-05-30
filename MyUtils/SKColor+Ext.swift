@@ -1,9 +1,8 @@
 //
-//  SKColor+Ext.swift
-//  PestControl
+//  SKFloat+Ext.swift
+//  GameJam
 //
-//  Created by Jack Ily on 23/10/2019.
-//  Copyright © 2019 Jack Ily. All rights reserved.
+//  Created by Bayu Septyan Nur Hidayat on 30/05/2024.
 //
 
 import SpriteKit

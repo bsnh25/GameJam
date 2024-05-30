@@ -1,9 +1,8 @@
 //
 //  ScoreGenerator.swift
-//  NInja
+//  GameJam
 //
-//  Created by Jack Ily on 13/11/2019.
-//  Copyright © 2019 Jack Ily. All rights reserved.
+//  Created by Bayu Septyan Nur Hidayat on 30/05/2024.
 //
 
 import Foundation
