@@ -1,7 +1,10 @@
 //
 //  GameScene.swift
 //  NInja
+//  NInja
 //
+//  Created by Jack Ily on 13/11/2019.
+//  Copyright © 2019 Jack Ily. All rights reserved.
 //  Created by Jack Ily on 13/11/2019.
 //  Copyright © 2019 Jack Ily. All rights reserved.
 //
@@ -232,4 +235,8 @@ extension GameScene: SKPhysicsContactDelegate {
         default: break
         }
     }
+    
+
+    
+    
 }

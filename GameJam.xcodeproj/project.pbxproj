@@ -127,6 +127,8 @@
 				03DA1DDE2C083C920038A581 /* HUD.swift */,
 				03DA1DDF2C083C920038A581 /* ScoreGenerator.swift */,
 				03DA1DDC2C0771C80038A581 /* Player.swift */,
+				0B84DF972C082B1F007935EC /* Ground.swift */,
+				0B84DF992C082B51007935EC /* Cloud.swift */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -213,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B84DF982C082B1F007935EC /* Ground.swift in Sources */,
 				033591322C06FEC300A92660 /* GameScene.swift in Sources */,
 				033591342C06FEC300A92660 /* GameViewController.swift in Sources */,
 				03DA1DE12C083C920038A581 /* ScoreGenerator.swift in Sources */,
@@ -376,6 +379,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F44CLK4937;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -409,6 +413,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F44CLK4937;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

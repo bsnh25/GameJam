@@ -12,8 +12,8 @@ class Player: SKSpriteNode {
     
     var isMoveDown = false
     
-    init() {
-        let texture = SKTexture(imageNamed: "player1")
+    init(){
+        let texture = SKTexture(imageNamed: "Tikus-1")
         super.init(texture: texture, color: .clear, size: texture.size())
         name = "Player"
         zPosition = 1.0
