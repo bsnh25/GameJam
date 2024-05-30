@@ -15,6 +15,9 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         
+        // ini physic (2)
+        setupPhysics()
+        
         // Get label node from scene and store it for use later
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
         if let label = self.label {
@@ -35,54 +38,64 @@ class GameScene: SKScene {
                                               SKAction.removeFromParent()]))
         }
     }
+
     
     
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
-    }
+    //Movement
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//       super.touchesBegan(touches, with: event)
+//        playerNode.setupMoveUpDown()
+//    }
     
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+}
+
+
+extension GameScene {
+    @objc func spawnWalls() {
+        let scale: CGFloat
+        if Int(arc4random_uniform(UInt32(2))) == 0 {
+            scale = -1.0
+        } else {
+            scale = 1.0
         }
         
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
+        //Wall
+        let wall = SKSpriteNode(imageNamed: "block").copy() as! SKSpriteNode
+        wall.name = "Block"
+        wall.zPosition = 2.0
+        //        wall.position = CGPoint(x: size.width + wall.frame.width, y: frame.height/2.0 + (wall.frame.height + groundNode.frame.height)/2.0 * scale)
+        
+        //Add physic (1)
+        wall.physicsBody = SKPhysicsBody(rectangleOf: wall.size)
+        wall.physicsBody?.isDynamic = false
+        wall.physicsBody?.categoryBitMask = PhysicsCategory.Wall
+        addChild(wall)
+        wall.run(.sequence([.wait(forDuration: 8.0), .removeFromParent()]))
+        
+        
+        
+        
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
+    @objc func setupPhysics(){
+        physicsWorld.contactDelegate = self
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+    // Step 4
+//    func gameOver(){
+////        playerNode.removeFromParent()
+//    }
+}
+
+// Step 3
+extension GameScene: SKPhysicsContactDelegate {
+    func didBegin(_ contact: SKPhysicsContact) {
+        let other = contact.bodyA.categoryBitMask == PhysicsCategory.Player ? contact.bodyB : contact.bodyA
+        
+        switch other.categoryBitMask{
+        case PhysicsCategory.Wall:
+            printContent("wall")
+        default: break
+        }
     }
 }
