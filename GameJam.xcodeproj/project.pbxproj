@@ -17,6 +17,11 @@
 		0335913C2C06FEC400A92660 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0335913B2C06FEC400A92660 /* Base */; };
 		03DA1DDA2C07714F0038A581 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA1DD92C07714F0038A581 /* Types.swift */; };
 		03DA1DDD2C0771C80038A581 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA1DDC2C0771C80038A581 /* Player.swift */; };
+		03DA1DE02C083C920038A581 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA1DDE2C083C920038A581 /* HUD.swift */; };
+		03DA1DE12C083C920038A581 /* ScoreGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA1DDF2C083C920038A581 /* ScoreGenerator.swift */; };
+		03DA1DE32C083D400038A581 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA1DE22C083D400038A581 /* Ground.swift */; };
+		03DA1DE72C083DF90038A581 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA1DE42C083DF90038A581 /* CGFloat+Ext.swift */; };
+		03DA1DE82C083DF90038A581 /* SKColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA1DE52C083DF90038A581 /* SKColor+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		0335913B2C06FEC400A92660 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03DA1DD92C07714F0038A581 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		03DA1DDC2C0771C80038A581 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		03DA1DDE2C083C920038A581 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		03DA1DDF2C083C920038A581 /* ScoreGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreGenerator.swift; sourceTree = "<group>"; };
+		03DA1DE22C083D400038A581 /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
+		03DA1DE42C083DF90038A581 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
+		03DA1DE52C083DF90038A581 /* SKColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,7 @@
 		0335911F2C06FEC300A92660 = {
 			isa = PBXGroup;
 			children = (
+				03DA1DE62C083DF90038A581 /* MyUtils */,
 				03DA1DDB2C0771B30038A581 /* Characters */,
 				03DA1DD82C0771430038A581 /* Types */,
 				0335912A2C06FEC300A92660 /* GameJam */,
@@ -112,9 +123,21 @@
 		03DA1DDB2C0771B30038A581 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				03DA1DE22C083D400038A581 /* Ground.swift */,
+				03DA1DDE2C083C920038A581 /* HUD.swift */,
+				03DA1DDF2C083C920038A581 /* ScoreGenerator.swift */,
 				03DA1DDC2C0771C80038A581 /* Player.swift */,
 			);
 			path = Characters;
+			sourceTree = "<group>";
+		};
+		03DA1DE62C083DF90038A581 /* MyUtils */ = {
+			isa = PBXGroup;
+			children = (
+				03DA1DE42C083DF90038A581 /* CGFloat+Ext.swift */,
+				03DA1DE52C083DF90038A581 /* SKColor+Ext.swift */,
+			);
+			path = MyUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,8 +215,13 @@
 			files = (
 				033591322C06FEC300A92660 /* GameScene.swift in Sources */,
 				033591342C06FEC300A92660 /* GameViewController.swift in Sources */,
+				03DA1DE12C083C920038A581 /* ScoreGenerator.swift in Sources */,
+				03DA1DE82C083DF90038A581 /* SKColor+Ext.swift in Sources */,
 				0335912C2C06FEC300A92660 /* AppDelegate.swift in Sources */,
+				03DA1DE02C083C920038A581 /* HUD.swift in Sources */,
 				03DA1DDD2C0771C80038A581 /* Player.swift in Sources */,
+				03DA1DE72C083DF90038A581 /* CGFloat+Ext.swift in Sources */,
+				03DA1DE32C083D400038A581 /* Ground.swift in Sources */,
 				03DA1DDA2C07714F0038A581 /* Types.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

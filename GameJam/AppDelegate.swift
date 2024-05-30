@@ -1,17 +1,17 @@
 //
 //  AppDelegate.swift
-//  GameJam
+//  NInja
 //
-//  Created by Bayu Septyan Nur Hidayat on 29/05/24.
+//  Created by Jack Ily on 13/11/2019.
+//  Copyright © 2019 Jack Ily. All rights reserved.
 //
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
