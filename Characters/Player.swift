@@ -33,11 +33,11 @@ class Player: SKSpriteNode {
 //MARK - Configuration Movement
 
 extension Player {
-//    func setupPlayer(_ ground: Ground, scene: SKScene) {
-//        position = CGPoint(x: scene.frame.width/2.0 - 100.0, y: (scene.frame.height + ground.frame.height + frame.height)/2.0)
-//        scene.addChild(self)
-//        setupAnim()
-//    }
+    func setupPlayer(_ ground: Ground, scene: SKScene) {
+        position = CGPoint(x: scene.frame.width/2.0 - 100.0, y: (scene.frame.height + ground.frame.height + frame.height)/2.0)
+        scene.addChild(self)
+        setupAnim()
+    }
     
     
     func setupAnim(){
