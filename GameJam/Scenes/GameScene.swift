@@ -10,6 +10,10 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    // MARK: Properties
+    
+    var groundNode = Ground()
+    
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
