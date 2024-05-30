@@ -46,6 +46,7 @@ extension Player {
         for i in 1...2 {
             textures.append(SKTexture(imageNamed: "Tikus\(i)"))
         }
+        run(.repeatForever(.animate(with: textures, timePerFrame: 0.1)))
     }
     
     func setupMoveUpDown() {
