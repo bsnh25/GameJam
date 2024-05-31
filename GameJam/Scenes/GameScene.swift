@@ -54,7 +54,7 @@ class GameScene: SKScene {
         
         let backgroundImage = SKSpriteNode(imageNamed: "Background").copy() as! SKSpriteNode
         backgroundImage.size.width = size.width
-        backgroundImage.size.height = size.height + 50
+        backgroundImage.size.height = size.height
         backgroundImage.anchorPoint = .zero
         backgroundImage.zPosition = -5
         addChild(backgroundImage)
